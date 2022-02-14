@@ -1,0 +1,84 @@
+$bgBody: black;
+$bgApp: blue;
+$bgShadow: 5px 5px 7px -2px rgb(0, 179, 0);
+
+@mixin d-flex {
+    display: flex;
+}
+@mixin wrap {
+    @include d-flex();
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img {
+    max-width: 100%;
+}
+.App {
+    @include wrap();
+    color: beige;
+    background-color: $bgBody;
+    a,
+    input,
+    input::placeholder {
+        color: inherit;
+    }
+}
+.container {
+    max-width: 900px;
+    width: 95%;
+    min-height: 110vh;
+    display: grid;
+    grid-template-rows: 60px 1fr;
+    grid-template-columns: 2fr 10fr;
+    gap: 10px;
+    grid-template-areas: "h h" "n m";
+    .main,
+    .navigation,
+    .header {
+        background-color: $bgApp;
+        box-shadow: $bgShadow;
+        border-radius: 10px;
+    }
+    .navigation,
+    .header {
+        position: sticky;
+    }
+}
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    grid-area: h;
+    top: 0;
+    margin-top: 10px;
+    z-index: 2;
+}
+.main {
+    grid-area: m;
+}
+.navigation {
+    grid-area: n;
+    top: 0;
+    z-index: 1;
+    padding: 120px 0 0 30px;
+}
+.logo>a {
+    display: flex;
+    height: 40px;
+}
+.formSearch {
+    display: flex;
+    height: 30px;
+}
+.account>button{
+    display: flex;
+    height: 30px;
+    width: 70px;
+    align-items: center;
+}

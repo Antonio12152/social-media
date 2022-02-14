@@ -1,0 +1,21 @@
+.all{
+    width: 40%;
+    font-size: 20px;
+}
+.ava {
+    display: inline-block;
+    width: 70%;
+    border-radius: 100%;
+    overflow: hidden;
+    
+}
+.button {
+    width: 50%;
+    align-items: center;
+}
+.button > button {
+    width: 100%;
+    background-color: red;
+    padding: 15px;
+    font-size: 24px;
+}

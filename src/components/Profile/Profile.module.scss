@@ -1,0 +1,28 @@
+.profile{
+    display: grid;
+    grid-template-rows: 150px 2fr;
+    grid-template-columns: 1fr 10fr;
+    grid-template-areas: "h" "n";
+}
+.profile__ava{
+    width: 150px;
+    border-radius: 100%;
+    overflow: hidden;
+    grid-area: h;
+}
+.profile__n{
+    grid-area: n;
+    max-height: 150px;
+    overflow: hidden;
+}
+.profile__addPost{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    
+    textarea{
+        resize: none;
+        height: 50px;
+        padding: 5px;
+    }
+}
