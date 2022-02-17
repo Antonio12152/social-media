@@ -61,14 +61,18 @@ img {
 }
 .main {
     grid-area: m;
+    padding: 20px;
 }
 .navigation {
     grid-area: n;
     top: 0;
     z-index: 1;
     padding: 120px 0 0 30px;
+    .active{
+        color: rgb(201, 201, 201);
+    }
 }
-.logo>a {
+.logo > a {
     display: flex;
     height: 40px;
 }
@@ -76,7 +80,7 @@ img {
     display: flex;
     height: 30px;
 }
-.account>button{
+.account > button {
     display: flex;
     height: 30px;
     width: 70px;

@@ -1,21 +1,23 @@
-.all{
-    width: 40%;
+.home {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 100px 8fr 2fr;
+    gap: 30px;
+    align-items: center;
     font-size: 20px;
 }
-.ava {
-    display: inline-block;
-    width: 70%;
-    border-radius: 100%;
+.home__ava {
     overflow: hidden;
-    
+    width: 100px;
+    img{
+        border-radius: 100%;
+    }
 }
-.button {
-    width: 50%;
+.home__button {
     align-items: center;
-}
-.button > button {
-    width: 100%;
-    background-color: red;
-    padding: 15px;
-    font-size: 24px;
+    button {
+        background-color: red;
+        padding: 12px 15px;
+        font-size: 24px;
+    }
 }

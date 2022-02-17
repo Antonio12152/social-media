@@ -54,10 +54,8 @@ const UserProfile = (props) => {
                 <div className={classes.profile__ava}>
                     <img src={avatar} alt="" />
                 </div>
-                <div className={classes.prifile__n}>
+                <div className={classes.profile__n}>
                     <span className={classes.profile__name}>{props.userName}</span>
-                    <br />
-                    <span className={classes.profile__status}>Статус </span>
                 </div>
             </div>
             <div className={classes.profile__addPost}>

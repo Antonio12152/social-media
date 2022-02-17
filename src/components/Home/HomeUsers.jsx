@@ -20,15 +20,16 @@ const HomeUsers = (props) => {
             .then(() => e.target.disabled = false)
     }
     return (
-        <div className={classes.all}>
-            <div className={classes.ava}>
+        <div className={classes.home}>
+            
+            <div className={classes.home__ava}>
                 <NavLink to={`/profile/${props.id}`}><img src={avatar} alt="" /></NavLink>
             </div>
             <div>
                 <NavLink to={`/profile/${props.id}`}>{props.name}</NavLink><br />
                 <span>{props.company}</span>
             </div>
-            <div className={classes.button}>
+            <div className={classes.home__button}>
                 {props.followed ?
                     <button type="button" onClick={(e) => follow(e, false)}>Unfollow</button> :
                     <button type="button" onClick={(e) => follow(e, true)}>Follow</button>}
